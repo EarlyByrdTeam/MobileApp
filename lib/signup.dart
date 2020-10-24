@@ -1,109 +1,91 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
 
-void main() => runApp(new MyApp());
-
-class MyApp extends StatelessWidget {
+class SignupPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new MyHomePage(),
-      routes: <String, WidgetBuilder>{
-        '/signup': (BuildContext context) => new SignupPage()
-      },
-    );
-  }
+  _SignupPageState createState() => _SignupPageState();
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
         resizeToAvoidBottomPadding: false,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(25.0, 100.0, 0.0, 0.0),
-                    child: Text('Welcome to',
-                        style: TextStyle(
-                            fontSize: 60.0)),
+        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
+            Widget>[
+          Container(
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(25.0, 100.0, 0.0, 0.0),
+                  child: Text(
+                    'Create Account ',
+                    style:
+                    TextStyle(fontSize: 50.0,),
                   ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(25.0, 165.0, 0.0, 0.0),
-                    child: Text('Early',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold, color: Colors.blue)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(203.0, 165.0, 0.0, 0.0),
-                    child: Text('Byrd',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold, color: Colors.amber)),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Container(
-                padding: EdgeInsets.only(top: 35.0, left: 25.0, right: 25.0),
-                child: Column(
-                  children: <Widget>[
-                    TextField(
-                      decoration: InputDecoration(
-                          labelText: 'Username',
-                          labelStyle: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
-                    ),
-                    SizedBox(height: 20.0),
-                    TextField(
-                      decoration: InputDecoration(
-                          labelText: 'Password',
-                          labelStyle: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.blue))),
-                      obscureText: true,
-                    ),
-                    SizedBox(height: 5.0),
-                    Container(
-                      alignment: Alignment(1.0, 0.0),
-                      padding: EdgeInsets.only(top: 15.0, left: 20.0),
-                      child: InkWell(
-                        child: Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                              decoration: TextDecoration.underline),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 40.0),
-                    Container(
+          ),
+          Container(
+              padding: EdgeInsets.only(top: 35.0, left: 25.0, right: 25.0),
+              child: Column(
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(
+                        labelText: 'First Name',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        // hintText: 'EMAIL',
+                        // hintStyle: ,
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                  ),
+                  SizedBox(height: 10.0),
+                  TextField(
+                    decoration: InputDecoration(
+                        labelText: 'Last Name ',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                    obscureText: true,
+                  ),
+                  SizedBox(height: 10.0),
+                  TextField(
+                    decoration: InputDecoration(
+                        labelText: 'Email ',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                  ),
+                  SizedBox(height: 10.0),
+                  TextField(
+                    decoration: InputDecoration(
+                        labelText: 'Password ',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.blue))),
+                    obscureText: true,
+                  ),
+                  SizedBox(height: 50.0),
+                  Container(
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.greenAccent,
+                        shadowColor: Colors.blueAccent,
                         color: Colors.blue,
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {},
                           child: Center(
                             child: Text(
-                              'LOGIN',
+                              'SIGNUP',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -111,33 +93,36 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
+                      )),
+                  SizedBox(height: 20.0),
+                  Container(
+                    height: 40.0,
+                    color: Colors.transparent,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              color: Colors.black,
+                              style: BorderStyle.solid,
+                              width: 1.0),
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(20.0)),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child:
+
+                        Center(
+                          child: Text('Go Back',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                              )),
+                        ),
                       ),
                     ),
-                    SizedBox(height: 20.0),
-                  ],
-                )),
-            SizedBox(height: 25.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Don''t have an account?',
-                ),
-                SizedBox(width: 5.0),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).pushNamed('/signup');
-                  },
-                  child: Text(
-                    'Sign-Up',
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline),
                   ),
-                )
-              ],
-            )
-          ],
-        ));
+                ],
+              )),
+        ]));
   }
 }
