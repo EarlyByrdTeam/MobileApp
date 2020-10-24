@@ -1,2 +1,2 @@
 # MobileApp
-Flutter app to augment teh capabilities of the EarlyByrd Device
+Flutter app to augment the capabilities of the EarlyByrd Device
