@@ -36,9 +36,7 @@ class _SignupPageState extends State<SignupPage> {
                         labelStyle: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey),
-                        // hintText: 'EMAIL',
-                        // hintStyle: ,
-                        focusedBorder: UnderlineInputBorder(
+                            focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.blue))),
                   ),
                   SizedBox(height: 10.0),
